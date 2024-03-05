@@ -1,0 +1,65 @@
+.body{
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: "Open Sans", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    color: #535353;
+}
+.loginwrapper {
+    background-image: url('../../assets/bgimage.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.login-overlay {
+    background-image: url('../../assets/bg-dot.png');
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:1;
+    opacity: 1;
+}
+.login_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    width: 430px;
+    padding: 20px 30px 30px;
+    border-radius: 2px;
+    background-color: rgba(38, 43, 54, .9);
+    color: white !important;
+    z-index: 300;
+}
+.login_form .heading__image {
+    width: 100%;
+    height: 49px;
+    margin: 0em 0.4166666667em;
+    background-image: url('../../assets/webmanagement.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.login_form .heading {
+    width: calc(100% - 40px);
+    margin: 0 20px 30px;
+    display: flex;
+    justify-content: center;
+}
+.login_form .btn-success {
+    color: #fff;
+    background-color: #32c2d2;
+    border-color: transparent;
+}
+.login_form .btn-success:hover {
+    color: #fff;
+    background-color: #16acbd;
+    border-color: transparent;
+}
+
+
