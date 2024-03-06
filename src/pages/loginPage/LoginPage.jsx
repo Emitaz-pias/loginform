@@ -9,16 +9,8 @@ import LockIcon from '@mui/icons-material/Lock';
 const LoginPage = () => {
   // const [age, setAge] = useState('');
   // const [open, setOpen] = useState(false)
-  const [selected, setSelected] = useState("");
-  const onSelect = (code) => setSelected(code);
-
-  const showSelectedLabel = ( false);
-  const showSecondarySelectedLabel = (
- false
-  );
-  const showOptionLabel = (false);
-  const showSecondaryOptionLabel = (true);
-  const searchable = ( false);
+  const [select, setSelect] = useState("GB");
+  const onSelect = (code) => setSelect(code);
   const handleSubmit=()=>{}
   return (
     <div className='body loginwrapper'>
@@ -26,19 +18,17 @@ const LoginPage = () => {
       <div  className='login_form'>
         <div   className="lang">
           <Box >
-            
-              <ReactFlagsSelect
-              placeholder={`${selected}`}
-              onSelect={(countryCode)=>onSelect(countryCode)}
-              defaultCountry={"GB"}
-              showSelectedLabel={showSelectedLabel}
-        showSecondarySelectedLabel={showSecondarySelectedLabel}
-        showOptionLabel={showOptionLabel}
-        showSecondaryOptionLabel={showSecondaryOptionLabel}
-              selectedSize={20}
-              optionsSize={20}
-              fullWidth={true}
-              />
+         <Grid container justifyContent={'flex-end'} spacing={1}>
+          <Grid>
+          <ReactFlagsSelect
+         sx={{backgroundColor:"black"}}
+        selected={select}
+        onSelect={onSelect}
+        countries={["GB","FR","ES","RU","TR","CN"]}
+        customLabels={{GB: "EN-GB", FR: "FR",ES: "ES",RU:"RU",TR:"TR",CN:"CN" }}
+        />
+          </Grid>
+         </Grid>
           </Box>
           <div className="heading">
             <div className="heading__image"></div>
