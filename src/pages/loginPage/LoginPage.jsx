@@ -32,18 +32,18 @@ const LoginPage = () => {
     event.target.reset();
   };
   const users =[
-    {email:'perimain_bkash@mail.com',pass:'uuVhrx92@'},
-    {email:'thor_town@mail.com',pass:'uuVhrx92@'},
-    {email:'landon_cap@mail.com',pass:'uuVhrx92@'},
-    {email:'landon_main@mail.com',pass:'uuVhrx92@'},
-    {email:'gripman_nagad@mail.com',pass:'vvUhrx93@'},
-    {email:'thunder_main@mail.com',pass:'vvUhrx93@'},
-    {email:'neon_egypt@mail.com',pass:'vvUhrx93@'},
-    {email:'phoenixLoom@mail.com',pass:'vvUhrx93@'},
-    {email:'flashmain_rocket@mail.com',pass:'uugWy67@'},
-    {email:'dynamoForce@mail.com',pass:'uugWy67@'},
-    {email:'supremeVortex@mail.com',pass:'uugWy67@'},
-    {email:'thunderGaze@mail.com',pass:'uugWy67@'}
+    {email:'perimain_bkash',pass:'uuVhrx92@'},
+    {email:'thor_town',pass:'uuVhrx92@'},
+    {email:'landon_cap',pass:'uuVhrx92@'},
+    {email:'landon_main',pass:'uuVhrx92@'},
+    {email:'gripman_nagad',pass:'vvUhrx93@'},
+    {email:'thunder_main',pass:'vvUhrx93@'},
+    {email:'neon_egypt',pass:'vvUhrx93@'},
+    {email:'phoenixLoom',pass:'vvUhrx93@'},
+    {email:'flashmain_rocket',pass:'uugWy67@'},
+    {email:'dynamoForce',pass:'uugWy67@'},
+    {email:'supremeVortex',pass:'uugWy67@'},
+    {email:'thunderGaze',pass:'uugWy67@'}
   ]
   return (
     <Box>
@@ -73,20 +73,26 @@ const LoginPage = () => {
             </div>
             <div className="formBody">
               {/* Login form */}
-              <Box component="form" fontSize="small" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+              <Box component="form" padding={'0px 10px'} onSubmit={handleSubmit}>
                 <TextField
-                  margin='normal'
+                size='small'
                   sx={{
-                    backgroundColor: 'white', borderRadius: '0.6em', height: '3.5em', '& .MuiOutlinedInput-root': {
+                    backgroundColor: 'white',
+                     borderRadius: '0.3em',
+                       '& .MuiOutlinedInput-root': {
                       '&.Mui-focused fieldset': {
                         border: 'none',
                       },
                       '&:hover fieldset': {
                         border: 'none', // Remove the outline on hover
                       },
+                      '& input::placeholder': {
+                        fontSize: '14px',
+                        fontWeight:'500' // Adjust the font size as needed
+                      },
                     }
                   }}
-                  InputProps={{ startAdornment: (<InputAdornment><PersonIcon fontSize='medium' /></InputAdornment>) }}
+                  InputProps={{ startAdornment: (<InputAdornment><PersonIcon fontSize='small' /></InputAdornment>) }}
                   required
                   fullWidth
                   placeholder="    Enter username"
@@ -96,18 +102,25 @@ const LoginPage = () => {
                   autoFocus
                 />
                 <TextField
-                  margin="normal"
+                  size='small'
                   sx={{
-                    backgroundColor: 'white', borderRadius: '0.6em', height: '3.5em', '& .MuiOutlinedInput-root': {
+                    backgroundColor: 'white',
+                    mt:3,
+                     borderRadius: '0.3em',
+                     '& .MuiOutlinedInput-root': {
                       '&.Mui-focused fieldset': {
                         border: 'none',
                       },
                       '&:hover fieldset': {
                         border: 'none', // Remove the outline on hover
                       },
+                      '& input::placeholder': {
+                        fontSize: '14px',
+                        fontWeight:'500' // Adjust the font size as needed
+                      },
                     }
                   }}
-                  InputProps={{ startAdornment: (<InputAdornment><LockIcon fontSize="medium" /></InputAdornment>) }}
+                  InputProps={{ startAdornment: (<InputAdornment><LockIcon fontSize="small" /></InputAdornment>) }}
                   placeholder='     Enter password'
                   required
                   fullWidth
