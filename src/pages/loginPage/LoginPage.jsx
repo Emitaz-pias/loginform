@@ -9,7 +9,7 @@ import LockIcon from '@mui/icons-material/Lock';
 const LoginPage = () => {
   const [email,setEmail]=useState('asdf@gmail.com')
   const [password,setPassword]=useState('asdf')
-  const [select, setSelect] = useState("GB");
+  const [select, setSelect] = useState("FR");
   const onSelect = (code) => setSelect(code);
   const handleSubmit = (event) => {
     event.preventDefault(); 
