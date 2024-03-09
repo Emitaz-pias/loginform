@@ -9,98 +9,127 @@ import ListPage from '../listPage/ListPage';
 
 
 const LoginPage = () => {
-  const [email,setEmail]=useState('asdf@gmail.com')
-  const [password,setPassword]=useState('asdf')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [select, setSelect] = useState("FR");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const onSelect = (code) => setSelect(code);
   const handleSubmit = (event) => {
     event.preventDefault(); 
     const formData = new FormData(event.target);
-    const email = formData.get('email');
-    const password = formData.get('password')
-    setEmail(email)
-    setPassword(password)
+    const enteredEmail = formData.get('email');
+    const enteredPassword = formData.get('password');
+    const isUserValid = users.some(user => user.email === enteredEmail && user.pass === enteredPassword);
+
+    if (isUserValid) {
+      setEmail(enteredEmail);
+      setPassword(enteredPassword);
+      setIsLoggedIn(true);
+    } else {
+      // Display error message or handle invalid login
+      console.log("Invalid login");
+    }
     event.target.reset();
   };
-  const defaltEmail='asdf@mail'
+  const users =[
+    {email:'perimain_bkash@mail.com',pass:'uuVhrx92@'},
+    {email:'thor_town@mail.com',pass:'uuVhrx92@'},
+    {email:'landon_cap@mail.com',pass:'uuVhrx92@'},
+    {email:'landon_main@mail.com',pass:'uuVhrx92@'},
+    {email:'gripman_nagad@mail.com',pass:'vvUhrx93@'},
+    {email:'thunder_main@mail.com',pass:'vvUhrx93@'},
+    {email:'neon_egypt@mail.com',pass:'vvUhrx93@'},
+    {email:'phoenixLoom@mail.com',pass:'vvUhrx93@'},
+    {email:'flashmain_rocket@mail.com',pass:'uugWy67@'},
+    {email:'dynamoForce@mail.com',pass:'uugWy67@'},
+    {email:'supremeVortex@mail.com',pass:'uugWy67@'},
+    {email:'thunderGaze@mail.com',pass:'uugWy67@'}
+  ]
   return (
-   <Box>
-   {email===defaltEmail?<ListPage></ListPage>: <Box>
-   <div className='body loginwrapper'>
-      <div className='login-overlay' />
-      <div  className='login_form'>
-        <div   className="lang">
-          <Box >
-         <Grid container justifyContent={'flex-end'} spacing={1}>
-          <Grid>
-          <ReactFlagsSelect
-         sx={{backgroundColor:"black"}}
-        selected={select}
-        onSelect={onSelect}
-        countries={["GB","FR","ES","RU","TR","CN"]}
-        customLabels={{GB: "EN-GB", FR: "FR",ES: "ES",RU:"RU",TR:"TR",CN:"CN" }}
-        />
-          </Grid>
-         </Grid>
-          </Box>
-          <div className="heading">
-            <div className="heading__image"></div>
+    <Box>
+      {isLoggedIn ? (
+        <ListPage />
+      ) : (
+        <div className='body loginwrapper'>
+          {/* Login form */}
+          <div className='login-overlay' />
+          <div className='login_form'>
+            <div className="lang">
+              {/* Language selector */}
+              <Grid container justifyContent={'flex-end'} spacing={1}>
+                <Grid>
+                  <ReactFlagsSelect
+                    sx={{ backgroundColor: "black" }}
+                    selected={select}
+                    onSelect={onSelect}
+                    countries={["GB", "FR", "ES", "RU", "TR", "CN"]}
+                    customLabels={{ GB: "EN-GB", FR: "FR", ES: "ES", RU: "RU", TR: "TR", CN: "CN" }}
+                  />
+                </Grid>
+              </Grid>
+              <div className="heading">
+                <div className="heading__image"></div>
+              </div>
+            </div>
+            <div className="formBody">
+              {/* Login form */}
+              <Box component="form" fontSize="small" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                <TextField
+                  margin='normal'
+                  sx={{
+                    backgroundColor: 'white', borderRadius: '0.6em', height: '3.5em', '& .MuiOutlinedInput-root': {
+                      '&.Mui-focused fieldset': {
+                        border: 'none',
+                      },
+                      '&:hover fieldset': {
+                        border: 'none', // Remove the outline on hover
+                      },
+                    }
+                  }}
+                  InputProps={{ startAdornment: (<InputAdornment><PersonIcon fontSize='medium' /></InputAdornment>) }}
+                  required
+                  fullWidth
+                  placeholder="    Enter username"
+                  id="email"
+                  name="email"
+                  autoComplete="email"
+                  autoFocus
+                />
+                <TextField
+                  margin="normal"
+                  sx={{
+                    backgroundColor: 'white', borderRadius: '0.6em', height: '3.5em', '& .MuiOutlinedInput-root': {
+                      '&.Mui-focused fieldset': {
+                        border: 'none',
+                      },
+                      '&:hover fieldset': {
+                        border: 'none', // Remove the outline on hover
+                      },
+                    }
+                  }}
+                  InputProps={{ startAdornment: (<InputAdornment><LockIcon fontSize="medium" /></InputAdornment>) }}
+                  placeholder='     Enter password'
+                  required
+                  fullWidth
+                  name="password"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                />
+                <Button
+                  className='btn-success'
+                  type="submit"
+                  fullWidth
+                  sx={{ mt: 3, mb: 2, p: 1, fontWeight: 'bold' }}
+                >
+                  Log In
+                </Button>
+              </Box>
+            </div>
           </div>
         </div>
-        <div className="formBody">
-          <Box component="form" fontSize="small" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin='normal'
-              sx={{backgroundColor:'white',borderRadius:'0.6em',height:'3.5em','& .MuiOutlinedInput-root': {
-                '&.Mui-focused fieldset': {
-                  border: 'none',
-                },
-                '&:hover fieldset': {
-                  border: 'none', // Remove the outline on hover
-                },
-              }}}
-              InputProps={{startAdornment:(<InputAdornment><PersonIcon fontSize='medium'/></InputAdornment>)}}
-              required
-              fullWidth
-              placeholder="    Enter username"
-              id="email"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              sx={{backgroundColor:'white',borderRadius:'0.6em',height:'3.5em','& .MuiOutlinedInput-root': {
-                '&.Mui-focused fieldset': {
-                  border: 'none',
-                },
-                '&:hover fieldset': {
-                  border: 'none', // Remove the outline on hover
-                },
-              }}}
-              InputProps={{startAdornment:(<InputAdornment><LockIcon fontSize="medium"/></InputAdornment>)}}
-              placeholder='     Enter password'
-              required
-              fullWidth
-              name="password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <Button
-              className='btn-success'
-              type="submit"
-              fullWidth
-              sx={{ mt: 3, mb: 2 ,p:1,fontWeight:'bold'}}
-            >
-              Log In
-            </Button>
-          </Box>
-        </div>
-      </div>
-    </div>
-   </Box>}
-   </Box>
+      )}
+    </Box>
   );
 };
 

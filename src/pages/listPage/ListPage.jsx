@@ -10,7 +10,8 @@ const ListPage = () => {
         <Box sx={{pading:'3em 3em',height:'110vh',backgroundColor:"#d8dce3"}}>
             <Box sx={{display:'flex',justifyContent:'space-between'}}>
             <Box><a href="/">Page Principal</a></Box>
-            <Box><Box >
+            <Box>
+            <Box >
          <Grid container justifyContent={'flex-end'} spacing={1}>
           <Grid>
           <ReactFlagsSelect
@@ -22,15 +23,20 @@ const ListPage = () => {
         />
           </Grid>
          </Grid>
-          </Box></Box>
+          </Box>
+          </Box>
 
             </Box>
-           <Box  marginBottom='2em'>
+            <Grid container justifyContent={'center'}>
+             <Box marginBottom='2em'>
+             <Grid xs={12} sm={6} md={3} lg={3}>
            <Box className='box'> <Typography>LIST OF PAYMENT QUERIES AGENT</Typography><Typography className='dollar-sign'>$</Typography></Box>
-           <Box className='box'><Typography>PAYMENT QUERIES PROCESSING</Typography><Typography className='dollar-sign'>$</Typography></Box> 
-           <Box className='box'><Typography>DEMANDES DE RETRAIT</Typography><Typography className='dollar-sign'>$</Typography></Box> 
-           <Box className='box'><Typography>PENDING WITHDRAWAL REQUESTS</Typography><Typography className='dollar-sign'>$</Typography></Box> 
-           </Box>
+           </Grid>
+           <Grid xs={12} sm={6} md={3} lg={3}>      <Box className='box'><Typography>PAYMENT QUERIES PROCESSING</Typography><Typography className='dollar-sign'>$</Typography></Box>   </Grid>
+           <Grid xs={12} sm={6} md={3} lg={3}>         <Box className='box'><Typography>DEMANDES DE RETRAIT</Typography><Typography className='dollar-sign'>$</Typography></Box> </Grid>
+           <Grid xs={12} sm={6} md={3} lg={3}>    <Box className='box'><Typography>PENDING WITHDRAWAL REQUESTS</Typography><Typography className='dollar-sign'>$</Typography></Box> 
+           </Grid>  </Box>
+            </Grid>
  
         </Box>
     );
