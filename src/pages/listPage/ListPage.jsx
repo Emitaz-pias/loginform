@@ -9,7 +9,7 @@ import PublicIcon from '@mui/icons-material/Public';
 const ListPage = () => {
   const [select, setSelect] = useState("FR");
   const onSelect = (code) => setSelect(code);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [text,setText]=useState('')
   const [contentText,setContentText] = useState('')
   const handleClickOpen = (text,contentText) => {
