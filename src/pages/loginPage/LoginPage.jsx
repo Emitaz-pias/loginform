@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react';
+import React,{useState} from 'react';
 import './LoginPage.css'
 import Box from '@mui/material/Box';
 import { Button, Grid, InputAdornment, TextField } from '@mui/material';
@@ -13,6 +13,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [select, setSelect] = useState("FR");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  console.log(email,password);
   const onSelect = (code) => setSelect(code);
   const handleSubmit = (event) => {
     event.preventDefault(); 

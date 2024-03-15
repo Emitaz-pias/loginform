@@ -1,13 +1,16 @@
 
 .box{
     height:20vh;
-    width:38.5vw;
+    width:90vw;
     margin-top:1em;
     padding-top:0.1em;
     padding-right: 0.1rem;
     background-color: white;
     text-align: center;
 }
+@media (min-width: 992px) and (max-width: 1199.98px) { .box{width: 38vw;} }
+@media (min-width: 1200px) { .box{width: 38vw;} }
+
 .dollar-sign{
 font-size:4em !important;
 font-weight:'bold';
