@@ -95,7 +95,7 @@ const LoginPage = () => {
                   InputProps={{ startAdornment: (<InputAdornment><PersonIcon fontSize='small' /></InputAdornment>) }}
                   required
                   fullWidth
-                  placeholder="    Enter username"
+                  placeholder="   Введите логин"
                   id="email"
                   name="email"
                   autoComplete="email"
@@ -121,7 +121,7 @@ const LoginPage = () => {
                     }
                   }}
                   InputProps={{ startAdornment: (<InputAdornment><LockIcon fontSize="small" /></InputAdornment>) }}
-                  placeholder='     Enter password'
+                  placeholder='     Введите пароль'
                   required
                   fullWidth
                   name="password"
