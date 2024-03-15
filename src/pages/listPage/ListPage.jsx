@@ -22,7 +22,7 @@ const ListPage = () => {
     setOpen(false);
   };
   return (
-    <Box sx={{ pading: '1.5em 2em', height: '125vh', backgroundColor: "#d8dce3" }}>
+    <Box className='containerBox' sx={{ pading: '4em', height: '138vh', backgroundColor: "#d8dce3" }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Box><a href="/">Page Principal</a></Box>
         <Box>
