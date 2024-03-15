@@ -57,7 +57,7 @@ const ListPage = () => {
         </Grid>
 
         <Grid container justifyContent={'center'}>
-          <Box onClick={()=>handleClickOpen('Make your payment and our team will set up your new account bot for intregration with the Reddy app',` Note:Don't make your payment without contacting our retail team`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
+          <Box onClick={()=>handleClickOpen('Make your prepayment and your account bot will start integrating with the Reddy app.',`Note: Must contact our retail team while making your prepayment.`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
             Connect to Reddy
           </Box>
         </Grid>

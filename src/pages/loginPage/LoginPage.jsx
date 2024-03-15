@@ -60,6 +60,7 @@ const LoginPage = () => {
               <Grid container justifyContent={'flex-end'} spacing={1}>
                 <Grid>
                   <ReactFlagsSelect
+                  className=''
                     selected={select}
                     onSelect={onSelect}
                     countries={["GB", "FR", "ES", "RU", "TR", "CN"]}
@@ -95,7 +96,7 @@ const LoginPage = () => {
                   InputProps={{ startAdornment: (<InputAdornment><PersonIcon fontSize='small' /></InputAdornment>) }}
                   required
                   fullWidth
-                  placeholder="   Введите логин"
+                  placeholder=" Введите логин"
                   id="email"
                   name="email"
                   autoComplete="email"
@@ -121,7 +122,7 @@ const LoginPage = () => {
                     }
                   }}
                   InputProps={{ startAdornment: (<InputAdornment><LockIcon fontSize="small" /></InputAdornment>) }}
-                  placeholder='     Введите пароль'
+                  placeholder=' Введите пароль'
                   required
                   fullWidth
                   name="password"

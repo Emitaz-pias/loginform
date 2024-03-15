@@ -71,9 +71,10 @@
     border-color: transparent;
 }
 .ReactFlagsSelect-module_selectOptions__3LNBJ{
-    background-color:#535353;
+    background-color:#535353 !important;
     
 }
+
 .ReactFlagsSelect-module_selectOptions__3LNBJ :hover{
-    background-color:#9e9e9e;
+    background-color:#9e9e9e !important;
 }
