@@ -19,14 +19,14 @@
       
       @media (max-width:576px) {
         .containerBox{
-            height: 115vh;
+            height: 100vh;
         }
         .box{
-            width:80vw;
-            height: 18vh;
+            width:75vw;
+            height:21vh;
         }
         .dollar-sign {
-          font-size:6.5em !important;
+          font-size:6.2em !important;
         }
       }
       .ReactFlagsSelect-module_selectOptions__3LNBJ{
