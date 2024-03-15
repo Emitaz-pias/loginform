@@ -11,7 +11,7 @@ import ListPage from '../listPage/ListPage';
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [select, setSelect] = useState("FR");
+  const [select, setSelect] = useState("GB");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   console.log(email,password);
   const onSelect = (code) => setSelect(code);
@@ -60,7 +60,7 @@ const LoginPage = () => {
               <Grid container justifyContent={'flex-end'} spacing={1}>
                 <Grid>
                   <ReactFlagsSelect
-                    sx={{ backgroundColor: "black" }}
+                    className='custom-flag-select'
                     selected={select}
                     onSelect={onSelect}
                     countries={["GB", "FR", "ES", "RU", "TR", "CN"]}

@@ -45,10 +45,10 @@ const ListPage = () => {
       <Box> 
         <Grid container justifyContent={'center'}>
         <Box >
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Recipient Numbers Added Yet')} className='box'> <Typography>ACTIVE RECEIPIENT NUMBERS</Typography><Typography><PublicIcon className='dollar-sign' /></Typography></Box></Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Transiction Found Yet')} className='box'><Typography>TRANSACTION HISTORY</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>   </Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Deposit Request Found Yet')} className='box'><Typography>PENDING DEPOSIT REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box> </Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Withdrawal Request Found Yet')} className='box'><Typography>PENDING WITHDRAWAL REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No recipient numbers added yet')} className='box'> <Typography sx={{textAlign:'left'}}>ACTIVE RECEIPIENT NUMBERS</Typography><Typography><PublicIcon className='dollar-sign' /></Typography></Box></Grid>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No transiction found yet')} className='box'><Typography sx={{textAlign:'left'}}>TRANSACTION HISTORY</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>   </Grid>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No deposit request found yet')} className='box'><Typography sx={{textAlign:'left'}}>PENDING DEPOSIT REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box> </Grid>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No withdrawal request found yet')} className='box'><Typography sx={{textAlign:'left'}}>PENDING WITHDRAWAL REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>
           </Grid>
         </Box>
       </Grid>
@@ -57,12 +57,12 @@ const ListPage = () => {
         </Grid>
 
         <Grid container justifyContent={'center'}>
-          <Box onClick={()=>handleClickOpen('Make Your Payment And Our Team Will Set Up Your New Account Bot For Intregration With The Reddy App',`Don't Make Your Payment Without Contacting Our Retail Team`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
+          <Box onClick={()=>handleClickOpen('Make Your Payment And Our Team Will Set Up Your New Account Bot For Intregration With The Reddy App',` Note:Don't Make Your Payment Without Contacting Our Retail Team`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
             Connect To Reddy
           </Box>
         </Grid>
       </Box>
-      (<Modal text={text} contentText={contentText} open={open} handleClose={handleClose} ></Modal>)
+      <Modal text={text} contentText={contentText} open={open} handleClose={handleClose} ></Modal>
     </Box>
   );
 };

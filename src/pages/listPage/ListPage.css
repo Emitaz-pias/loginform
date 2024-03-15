@@ -4,10 +4,10 @@
     width:90vw;
     margin-top:1em;
     padding-top:0.1em;
-    padding-right: 0.1rem;
+    padding-left: 0.3rem;
     background-color: white;
     text-align: center;
-}
+    color: #9ae0e7;}
 @media (min-width: 992px) and (max-width: 1199.98px) { .box{width: 38vw;} }
 @media (min-width: 1200px) { .box{width: 38vw;} }
 
