@@ -7,7 +7,7 @@ import Modal from './Modal'
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PublicIcon from '@mui/icons-material/Public';
 const ListPage = () => {
-  const [select, setSelect] = useState("FR");
+  const [select, setSelect] = useState("GB");
   const onSelect = (code) => setSelect(code);
   const [open, setOpen] = useState(false);
   const [text,setText]=useState('')
@@ -30,7 +30,7 @@ const ListPage = () => {
             <Grid container justifyContent={'flex-end'} spacing={1}>
               <Grid>
                 <ReactFlagsSelect
-                  sx={{ backgroundColor: "black" }}
+                  
                   selected={select}
                   onSelect={onSelect}
                   countries={["GB", "FR", "ES", "RU", "TR", "CN"]}
@@ -45,10 +45,10 @@ const ListPage = () => {
       <Box> 
         <Grid container justifyContent={'center'}>
         <Box >
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No recipient numbers added yet')} className='box'> <Typography sx={{textAlign:'left'}}>ACTIVE RECEIPIENT NUMBERS</Typography><Typography><PublicIcon className='dollar-sign' /></Typography></Box></Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No transiction found yet')} className='box'><Typography sx={{textAlign:'left'}}>TRANSACTION HISTORY</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>   </Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No deposit request found yet')} className='box'><Typography sx={{textAlign:'left'}}>PENDING DEPOSIT REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box> </Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No withdrawal request found yet')} className='box'><Typography sx={{textAlign:'left'}}>PENDING WITHDRAWAL REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No recipient numbers added yet')} className='box'> <Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>ACTIVE RECEIPIENT NUMBERS</Typography><Typography><PublicIcon className='dollar-sign' /></Typography></Box></Grid>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No transiction found yet')} className='box'><Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>TRANSACTION HISTORY</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>   </Grid>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No deposit request found yet')} className='box'><Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>PENDING DEPOSIT REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box> </Grid>
+          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No withdrawal request found yet')} className='box'><Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>PENDING WITHDRAWAL REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>
           </Grid>
         </Box>
       </Grid>
@@ -57,8 +57,8 @@ const ListPage = () => {
         </Grid>
 
         <Grid container justifyContent={'center'}>
-          <Box onClick={()=>handleClickOpen('Make Your Payment And Our Team Will Set Up Your New Account Bot For Intregration With The Reddy App',` Note:Don't Make Your Payment Without Contacting Our Retail Team`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
-            Connect To Reddy
+          <Box onClick={()=>handleClickOpen('Make your payment and our team will set up your new account bot for intregration with the Reddy app',` Note:Don't make your payment without contacting our retail team`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
+            Connect to Reddy
           </Box>
         </Grid>
       </Box>

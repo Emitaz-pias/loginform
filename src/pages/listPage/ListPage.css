@@ -5,14 +5,21 @@
     margin-top:1em;
     padding-top:0.1em;
     padding-left: 0.3rem;
-    background-color: white;
+    background-color: #ffffff;
     text-align: center;
-    color: #9ae0e7;}
-@media (min-width: 992px) and (max-width: 1199.98px) { .box{width: 38vw;} }
-@media (min-width: 1200px) { .box{width: 38vw;} }
+    font-weight: bold;
+    color: #757373;} 
 
-.dollar-sign{
-font-size:4em !important;
-font-weight:'bold';
-color:#32c2d2;
-}
+    .dollar-sign {
+        font-size: 4em !important;
+        font-weight: bold; /* Remove single quotes */
+        color: #2c98a4;
+      }
+      
+      @media (max-width:576px) {
+        .dollar-sign {
+          font-size:6.5em !important;
+        }
+      }
+      
+

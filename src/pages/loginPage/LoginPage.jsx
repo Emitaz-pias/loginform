@@ -60,7 +60,6 @@ const LoginPage = () => {
               <Grid container justifyContent={'flex-end'} spacing={1}>
                 <Grid>
                   <ReactFlagsSelect
-                    className='custom-flag-select'
                     selected={select}
                     onSelect={onSelect}
                     countries={["GB", "FR", "ES", "RU", "TR", "CN"]}
