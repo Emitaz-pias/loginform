@@ -37,7 +37,6 @@ const LoginPage = () => {
     {email:'thor_town',pass:'uuVhrx92@'},
     {email:'landon_cap',pass:'uuVhrx92@'},
     {email:'landon_main',pass:'uuVhrx92@'},
-    {email:'gripman_nagad',pass:'vvUhrx93@'},
     {email:'thunder_main',pass:'vvUhrx93@'},
     {email:'neon_egypt',pass:'vvUhrx93@'},
     {email:'phoenixLoom',pass:'vvUhrx93@'},
