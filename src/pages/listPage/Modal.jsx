@@ -17,12 +17,12 @@ export default function AlertDialog({open,handleClose,text,contentText}) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle sx={{fontSize:'0.9em'}} id="alert-dialog-title">
           {text }
         </DialogTitle>
         <DialogContent>
-          <DialogContentText sx={{color:'red'}}>
-            {contentText}
+          <DialogContentText sx={{color:'red',fontSize:'0.8em'}}>
+          {contentText}
           </DialogContentText>
         </DialogContent>
         <DialogActions>

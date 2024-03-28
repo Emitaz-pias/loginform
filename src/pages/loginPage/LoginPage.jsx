@@ -11,7 +11,7 @@ import ListPage from '../listPage/ListPage';
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [select, setSelect] = useState("FR");
+  const [select, setSelect] = useState("GB");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   console.log(email,password);
   const onSelect = (code) => setSelect(code);
@@ -59,7 +59,7 @@ const LoginPage = () => {
               <Grid container justifyContent={'flex-end'} spacing={1}>
                 <Grid>
                   <ReactFlagsSelect
-                    sx={{ backgroundColor: "black" }}
+                  className=''
                     selected={select}
                     onSelect={onSelect}
                     countries={["GB", "FR", "ES", "RU", "TR", "CN"]}
@@ -95,7 +95,7 @@ const LoginPage = () => {
                   InputProps={{ startAdornment: (<InputAdornment><PersonIcon fontSize='small' /></InputAdornment>) }}
                   required
                   fullWidth
-                  placeholder="    Enter username"
+                  placeholder=" Введите логин"
                   id="email"
                   name="email"
                   autoComplete="email"
@@ -121,7 +121,7 @@ const LoginPage = () => {
                     }
                   }}
                   InputProps={{ startAdornment: (<InputAdornment><LockIcon fontSize="small" /></InputAdornment>) }}
-                  placeholder='     Enter password'
+                  placeholder=' Введите пароль'
                   required
                   fullWidth
                   name="password"

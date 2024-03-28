@@ -40,11 +40,12 @@
     z-index: 300;
     max-width:95vw !important;
 }
-@media (min-width: 576px) and (max-width: 767.98px) { .login_form{max-width:70vw !important; max-height: 60vh;} }
-
-@media (min-width: 992px) and (max-width: 1199.98px) { .login_form{max-width: 50vw !important; border: 1px solid red;} }
-
-
+@media (max-width: 767.98px) {
+    .login_form {
+        width: 80vw;
+    }
+  }
+  
 .login_form .heading__image {
     width: 100%;
     height: 49px;
@@ -69,5 +70,11 @@
     background-color: #16acbd;
     border-color: transparent;
 }
+.ReactFlagsSelect-module_selectOptions__3LNBJ{
+    background-color:#535353 !important;
+    
+}
 
-
+.ReactFlagsSelect-module_selectOptions__3LNBJ :hover{
+    background-color:#9e9e9e !important;
+}

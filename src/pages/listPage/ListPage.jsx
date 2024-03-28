@@ -7,7 +7,7 @@ import Modal from './Modal'
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PublicIcon from '@mui/icons-material/Public';
 const ListPage = () => {
-  const [select, setSelect] = useState("FR");
+  const [select, setSelect] = useState("GB");
   const onSelect = (code) => setSelect(code);
   const [open, setOpen] = useState(false);
   const [text,setText]=useState('')
@@ -22,15 +22,14 @@ const ListPage = () => {
     setOpen(false);
   };
   return (
-    <Box sx={{ pading: '1.5em 2em', height: '115vh', backgroundColor: "#d8dce3" }}>
+    <Box className='containerBox' sx={{ pading: '4em', height: '130vh', backgroundColor: "#d8dce3" }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Box><a href="/">Page Principal</a></Box>
         <Box>
           <Box >
             <Grid container justifyContent={'flex-end'} spacing={1}>
               <Grid>
-                <ReactFlagsSelect
-                  sx={{ backgroundColor: "black" }}
+                <ReactFlagsSelect  
                   selected={select}
                   onSelect={onSelect}
                   countries={["GB", "FR", "ES", "RU", "TR", "CN"]}
@@ -42,13 +41,14 @@ const ListPage = () => {
         </Box>
 
       </Box>
+      <Box sx={{ color:'#757373',marginLeft:'0.4em',maxWidth:'99vw'}}>Latest reports</Box>
       <Box> 
         <Grid container justifyContent={'center'}>
         <Box >
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Recipient Numbers Added Yet')} className='box'> <Typography>ACTIVE RECEIPIENT NUMBERS</Typography><Typography><PublicIcon className='dollar-sign' /></Typography></Box></Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Transiction Found Yet')} className='box'><Typography>TRANSACTION HISTORY</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>   </Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Deposit Request Found Yet')} className='box'><Typography>PENDING DEPOSIT REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box> </Grid>
-          <Grid xs={12} sm={6} md={3} lg={3}><Box onClick={()=>handleClickOpen('No Withdrawal Request Found Yet')} className='box'><Typography>PENDING WITHDRAWAL REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>
+          <Grid sx={{padding:'0.5em 1.1em'}} xs={11} sm={5} md={3} lg={3}><Box onClick={()=>handleClickOpen('No recipient numbers added yet')} className='box'> <Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>ACTIVE RECEIPIENT NUMBERS</Typography><Typography><PublicIcon className='dollar-sign' /></Typography></Box></Grid>
+          <Grid sx={{padding:'0.5em 1.1em'}} xs={11} sm={5} md={3} lg={3}><Box onClick={()=>handleClickOpen('No transaction found yet')} className='box'><Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>TRANSACTION HISTORY</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box> </Grid>
+          <Grid sx={{padding:'0.5em 1.1em'}} xs={11} sm={5} md={3} lg={3}><Box onClick={()=>handleClickOpen('No deposit request found yet')} className='box'><Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>PENDING DEPOSIT REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box> </Grid>
+          <Grid sx={{padding:'0.5em 1.1em'}} xs={11} sm={5} md={3} lg={3}><Box onClick={()=>handleClickOpen('No withdrawal request found yet')} className='box'><Typography sx={{textAlign:'left',fontWeight:'bold',padding:'0.4em'}}>PENDING WITHDRAWAL REQUESTS</Typography><Typography ><AttachMoneyIcon className='dollar-sign' /></Typography></Box>
           </Grid>
         </Box>
       </Grid>
@@ -57,12 +57,12 @@ const ListPage = () => {
         </Grid>
 
         <Grid container justifyContent={'center'}>
-          <Box onClick={()=>handleClickOpen('Make Your Payment And Our Team Will Set Up Your New Account Bot For Intregration With The Reddy App',`Don't Make Your Payment Without Contacting Our Retail Team`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
-            Connect To Reddy
+          <Box onClick={()=>handleClickOpen('Make your prepayment and your account bot will start integrating with the Reddy app.',`Note: Must contact our retail team while making your prepayment.`)}  sx={{ backgroundColor: "#16acbd", color: 'white', textAlign: 'center', width: '13em', padding: '0.5em 1em', borderRadius: '0.2rem', fontWeight: "bold" }} >
+            Connect to Reddy
           </Box>
         </Grid>
       </Box>
-      (<Modal text={text} contentText={contentText} open={open} handleClose={handleClose} ></Modal>)
+      <Modal text={text} contentText={contentText} open={open} handleClose={handleClose} ></Modal>
     </Box>
   );
 };
