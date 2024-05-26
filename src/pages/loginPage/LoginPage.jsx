@@ -33,17 +33,47 @@ const LoginPage = () => {
     event.target.reset();
   };
   const users =[
-    {email:'perimain_bkash',pass:'uuVhrx92@'},
+    {email:'perimain_bkash',pass:'nnjFGV76%'},
     {email:'thor_town',pass:'uuVhrx92@'},
     {email:'landon_cap',pass:'uuVhrx92@'},
-    {email:'landon_main',pass:'uuVhrx92@'},
+    {email:'landon_main',pass:'nnjFGV76%'},
+    {email:'gripman_nagad',pass:'vvUhrx93@'},
     {email:'thunder_main',pass:'vvUhrx93@'},
     {email:'neon_egypt',pass:'vvUhrx93@'},
     {email:'phoenixLoom',pass:'vvUhrx93@'},
     {email:'flashmain_rocket',pass:'uugWy67@'},
     {email:'dynamoForce',pass:'uugWy67@'},
     {email:'supremeVortex',pass:'uugWy67@'},
-    {email:'thunderGaze',pass:'uugWy67@'}
+    {email:'thunderGaze',pass:'uugWy67@'},
+    {email:'polion_egypt',pass:'jkLgWy67@'},
+    {email:'polion7_egypt',pass:'jkLgWy67@'},
+    {email:'fresco_main',pass:'jkLgWy67@'},
+    {email:'polion_main',pass:'jkLgWy67@'},
+    {email:'pirus_main',pass:'nuLgWy84@'},
+    {email:'alion_main',pass:'nuLgWy84@'},
+    {email:'perimain_insta',pass:'nuLgWy84@'},
+    {email:'polion_insta',pass:'nuLgWy84@'},
+    {email:'pablo_main',pass:'nuLgWy84@'},
+    {email:'fresco_voda',pass:'jkLgFHI37@'},
+    {email:'fresco_insta',pass:'jkLgFHI37@'},
+    {email:'Sphinxion7',pass:'jkLgFHI37@'},
+    {email:'GizaGraphix',pass:'jkLgFHI37@'},
+    {email:'pablo_egypt',pass:'jkLgFHI37@'},
+    {email:'PyramidPeak',pass:'JGiyfxvg56%'},
+    {email:'LotusLion_vibe',pass:'JGiyfxvg56%'},
+    {email:'PharaohFlick',pass:'JGiyfxvg56%'},
+    {email:'DesertDuo_dash',pass:'JGiyfxvg56%'},
+    {email:'CairoCode_craze',pass:'JGiyfxvg56%'},
+    {email:'lotus_voda',pass:'JGiyfxvg56%'},
+    {email:'lotus_insta',pass:'JGiyfxvg56%'},
+
+
+
+
+
+
+
+
   ]
   return (
     <Box>
