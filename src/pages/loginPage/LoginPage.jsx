@@ -33,11 +33,11 @@ const LoginPage = () => {
     event.target.reset();
   };
   const users =[
-    {email:'perimain_bkash',pass:'nnjFGV76%'},
+    {email:'hulkmain_bkash',pass:'nnjFGV76%'},
     {email:'thor_town',pass:'uuVhrx92@'},
     {email:'landon_cap',pass:'uuVhrx92@'},
     {email:'landon_main',pass:'nnjFGV76%'},
-    {email:'gripman_nagad',pass:'vvUhrx93@'},
+    {email:'hulkmain_nagad',pass:'vvUhrx93@'},
     {email:'thunder_main',pass:'vvUhrx93@'},
     {email:'neon_egypt',pass:'vvUhrx93@'},
     {email:'phoenixLoom',pass:'vvUhrx93@'},
