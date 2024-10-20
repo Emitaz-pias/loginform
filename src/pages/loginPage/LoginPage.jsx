@@ -40,7 +40,7 @@ const LoginPage = () => {
     {email:'hulkmain_nagad',pass:'vvUhrx93@'},
     {email:'thunder_main',pass:'vvUhrx93@'},
     {email:'neon_egypt',pass:'vvUhrx93@'},
-    {email:'phoenixLoom',pass:'vvUhrx93@'},
+    {email:'phoenixLoom',pass:'vvUhrx94@'},
     {email:'flashmain_rocket',pass:'uugWy67@'},
     {email:'dynamoForce',pass:'uugWy67@'},
     {email:'supremeVortex',pass:'uugWy67@'},
